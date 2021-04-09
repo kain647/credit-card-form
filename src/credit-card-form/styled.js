@@ -219,3 +219,20 @@ export const BtnSubmit = styled.button`
     top: 1px;
   }
 `;
+export const Footer = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  user-select: none;
+  z-index: 10;
+  svg {
+    width: var(--size);
+    height: var(--size);
+    --size: 24px;
+    color: #fff;
+    :hover {
+      color: #6a737d;
+    }
+  }
+`;
