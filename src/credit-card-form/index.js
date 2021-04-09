@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AiFillGithub } from "react-icons/ai"
 import {
   Container,
   CardForm,
@@ -6,7 +7,8 @@ import {
   InputContainer,
   VisaCardContainer,
   DropDownBox,
-  BtnSubmit
+  BtnSubmit,
+  Footer
 } from "./styled";
 import FrontCard from "./frontCard";
 import BackCard from "./backCard";
@@ -145,6 +147,11 @@ const Card = (props) => {
         </InputContainer>
           <BtnSubmit>Submit</BtnSubmit>
       </CardForm>
+        <Footer>
+            <a href="https://github.com/kain647" target="_blank">
+                <AiFillGithub />
+            </a>
+        </Footer>
     </Container>
   );
 };
