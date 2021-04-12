@@ -1,24 +1,28 @@
 import React from "react";
 import {CardExpiry, CardInfo, CardName, CardNumber, CardVisaFront} from "./styled"
 
-const FrontCard = ({flipped}, props) => {
+const FrontCard = ({flipped, name, cardNumber, month, year}) => {
     //console.log("front",flipped)
+    const first = cardNumber.slice(0,4) || "****"
+    const second = cardNumber.slice(4,8) || "****"
+    const third = cardNumber.slice(8,12) || "****"
+    const fourth = cardNumber.slice(12,16) || "****"
     return (
         <CardVisaFront flipped={flipped}>
             <CardNumber>
-                <span>****</span>
-                <span>****</span>
-                <span>****</span>
-                <span>****</span>
+                <span>{first}</span>
+                <span>{second}</span>
+                <span>{third}</span>
+                <span>{fourth}</span>
             </CardNumber>
             <CardInfo>
                 <CardName>
                     <span>Card Holder</span>
-                    <p>NAME</p>
+                    <p>{name}</p>
                 </CardName>
                 <CardExpiry>
                     <span>Expires</span>
-                    <p>12/12</p>
+                    <p>{month}/{year}</p>
                 </CardExpiry>
             </CardInfo>
         </CardVisaFront>

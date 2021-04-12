@@ -25,6 +25,13 @@ export const CardForm = styled.div`
   padding: 40px;
   box-shadow: 0 30px 60px 0 rgb(90 116 148 / 40%);
   margin-top: 135px;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin-top: 0px;
+  }
 `;
 export const VisaCardContainer = styled.div`
   display: flex;
@@ -35,6 +42,14 @@ export const VisaCardContainer = styled.div`
   justify-content: center;
   box-sizing: border-box;
   top: -135px;
+  z-index: 1;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    margin-top: 10px;
+  }
 `;
 export const CardVisaFront = styled.div`
   display: flex;
@@ -51,7 +66,12 @@ export const CardVisaFront = styled.div`
   background: linear-gradient(45deg, #343a40, #666666, #343a40);
   box-shadow: 0 20px 50px 0 rgb(14 42 90 / 60%);
   backface-visibility: hidden;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.9s ease-in-out;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    width: 90%;
+    box-shadow: 0 20px 50px 0 rgb(14 42 90 / 30%);
+  }
 `;
 export const CardVisaBack = styled.div`
   display: flex;
@@ -69,7 +89,12 @@ export const CardVisaBack = styled.div`
   background: linear-gradient(145deg, #343a40, #666666, #343a40);
   box-shadow: 0 20px 50px 0 rgb(14 42 90 / 60%);
   backface-visibility: hidden;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.9s ease-in-out;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    width: 90%;
+    box-shadow: 0 20px 50px 0 rgb(14 42 90 / 30%);
+  }
 `;
 export const CardInfo = styled.div`
   display: flex;
@@ -151,6 +176,9 @@ export const InputContainer = styled.div`
   label {
     margin-bottom: 10px;
   }
+  @media screen and (max-width: 768px) {
+    margin-top: auto;
+  }
 `;
 export const Magneticline = styled.div`
   display: flex;
@@ -186,6 +214,10 @@ export const CvvCode = styled.div`
   color: #1a3b5d;
   font-size: 18px;
   border-radius: 4px;
+`;
+export const Code = styled.div`
+  display: flex;
+  margin-right: 10px;
 `;
 export const DropDownBox = styled.div`
   display: flex;
@@ -234,5 +266,8 @@ export const Footer = styled.div`
     :hover {
       color: #6a737d;
     }
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
