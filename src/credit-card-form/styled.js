@@ -60,7 +60,7 @@ export const CardVisaFront = styled.div`
   width: 430px;
   height: 270px;
   border-radius: 15px;
-  padding: 25px 15px;
+  padding: 25px 35px;
   transform-style: preserve-3d;
   transform: ${({ flipped }) =>
     `perspective(2000px) ${flipped ? "rotateY(180deg)" : "rotateY(0)"}`};
@@ -128,7 +128,6 @@ export const CardNumber = styled.div`
   align-items: center;
   font-size: 18px;
   letter-spacing: 2px;
-  padding: 20px;
   color: #fff;
   margin-top: auto;
 `;
@@ -189,18 +188,29 @@ export const Magneticline = styled.div`
   display: flex;
   background: rgba(0, 0, 19, 0.8);
   width: 100%;
-  height: 50px;
-  margin-top: 40px;
+  height: 80px;
+  margin-top: 20px;
   margin-bottom: 10px;
 `;
 export const CvvBox = styled.div`
   display: flex;
+  height: 100%;
   flex-direction: column;
   padding: 10px;
 `;
 export const CvvCodeContainer = styled.div`
   display: flex;
   align-items: center;
+`;
+export const Terms = styled.div`
+  display: flex;
+  font-size: 10px;
+  color: #fff;
+  margin-top: auto;
+  p {
+    padding: 0;
+    margin: 0;
+  }
 `;
 export const CvvTitle = styled.div`
   display: flex;
@@ -295,5 +305,68 @@ export const Footer = styled.div`
   }
   @media screen and (max-width: 768px) {
     display: none;
+  }
+`;
+export const ChipContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  img {
+    width: 30px;
+    height: auto;
+  }
+`;
+export const Chip = styled.div`
+  display: flex;
+  position: relative;
+  width: 50px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom left, #ffecc7, #d0b978);
+  overflow: hidden;
+  margin-right: 40px;
+`;
+export const ChipLine = styled.div`
+  display: flex;
+  &.first {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    top: 13px;
+  }
+  &.second {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    top: 20px;
+  }
+  &.third {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    top: 28px;
+  }
+  &.fourth {
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    left: 25px;
+    background-color: #333;
+  }
+`;
+export const ChipMain = styled.div`
+  display: flex;
+  &.sixth {
+    width: 20px;
+    height: 25px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom left, #efdbab, #e1cb94);
+    z-index: 1;
   }
 `;
