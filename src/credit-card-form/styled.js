@@ -29,15 +29,16 @@ export const CardForm = styled.div`
     display: flex;
     width: 100%;
     height: 100%;
+    justify-content: end;
     border-radius: 0;
     margin-top: 0px;
   }
 `;
 export const VisaCardContainer = styled.div`
   display: flex;
+  position: absolute;
   width: 430px;
   height: 270px;
-  position: absolute;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -46,7 +47,7 @@ export const VisaCardContainer = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     position: fixed;
-    width: 100%;
+    max-width: 400px;
     top: 0px;
     margin-top: 10px;
   }
@@ -108,6 +109,7 @@ export const CardName = styled.div`
   flex-direction: column;
   p {
     font-size: 20px;
+    text-transform: uppercase;
   }
 `;
 export const CardExpiry = styled.div`
@@ -150,6 +152,9 @@ export const InputBox = styled.div`
     padding: 5px 15px;
     transition: all 0.3s ease-in-out;
     outline: none;
+    &.FullName {
+      text-transform: uppercase;
+    }
     :hover {
       border-color: #3d9cff;
     }
@@ -193,6 +198,10 @@ export const CvvBox = styled.div`
   flex-direction: column;
   padding: 10px;
 `;
+export const CvvCodeContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
 export const CvvTitle = styled.div`
   display: flex;
   margin-left: auto;
@@ -206,18 +215,35 @@ export const CvvCode = styled.div`
   display: flex;
   box-sizing: border-box;
   align-items: center;
-  text-align: right;
-  justify-content: flex-end;
+  justify-content: flex-start;
   height: 45px;
-  width: 100%;
-  background: #fff;
+  width: 350px;
+  background-image: repeating-linear-gradient(
+    #87ceeb 0,
+    #87ceeb 5px,
+    #ffa500 5px,
+    #ffa500 10px
+  );
   color: #1a3b5d;
   font-size: 18px;
-  border-radius: 4px;
+  border-radius: 4px 0px 0px 4px;
+  text-align: center;
+`;
+export const Signature = styled.div`
+  display: flex;
+  color: #000000;
+  font-family: "Liu Jian Mao Cao", cursive;
+  text-transform: capitalize;
+  margin-left: 15px;
 `;
 export const Code = styled.div`
   display: flex;
+  height: 42px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
   margin-right: 10px;
+  background-color: #efe9e9;
 `;
 export const DropDownBox = styled.div`
   display: flex;
