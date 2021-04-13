@@ -1,21 +1,33 @@
 import React from "react";
-import {CardVisaBack, CvvBox, CvvCode, CvvTitle, Magneticline, Code} from "./styled";
+import {
+  CardVisaBack,
+  CvvBox,
+  CvvCode,
+  CvvTitle,
+  Magneticline,
+  Code,
+  CvvCodeContainer,
+  Signature
+} from "./styled";
 
-const BackCard = ({flipped, cvv}) => {
-    //console.log("back",flipped)
-    return (
-        <CardVisaBack flipped={flipped}>
-            <Magneticline />
-            <CvvBox>
-                <CvvTitle>CVV</CvvTitle>
-                <CvvCode>
-                   <Code>
-                    {cvv}
-                   </Code>
-                </CvvCode>
-            </CvvBox>
-        </CardVisaBack>
-    )
-}
+const BackCard = ({ flipped, name, cvv }) => {
+  //console.log("back",flipped)
+  return (
+    <CardVisaBack flipped={flipped}>
+      <Magneticline />
+      <CvvBox>
+        <CvvTitle>CVV</CvvTitle>
+        <CvvCodeContainer>
+            <CvvCode>
+            <Signature>
+                {name}
+            </Signature>
+            </CvvCode>
+          <Code>{cvv}</Code>
+        </CvvCodeContainer>
+      </CvvBox>
+    </CardVisaBack>
+  );
+};
 
-export default BackCard
+export default BackCard;
