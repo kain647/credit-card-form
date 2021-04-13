@@ -39,12 +39,13 @@ class Card extends React.Component {
               cardNumber={cardNumber}
               flipped={!isFront}
             />
-            <BackCard cvv={cvv} flipped={isFront} />
+            <BackCard cvv={cvv} name={name} flipped={isFront} />
           </VisaCardContainer>
           <InputContainer>
             <InputBox>
               <label>Card Holder Name</label>
               <input
+                  className={"FullName"}
                 type="text"
                 onChange={(e) =>
                   this.setState({
