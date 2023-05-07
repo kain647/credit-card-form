@@ -25,7 +25,6 @@ export const DropdownContainer = styled.div`
   width: 100%;
   height: 40px;
   align-items: center;
-  //z-index: 1;
 `;
 export const DropdownDate = styled.div`
   display: block;

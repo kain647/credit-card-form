@@ -27,11 +27,11 @@ const FrontCard = ({ flipped, name, cardNumber, month, year }) => {
       </CardNumber>
       <ChipContainer>
         <Chip>
-          <ChipLine className={"first"}/>
-          <ChipLine className={"second"}/>
-          <ChipLine className={"third"}/>
-          <ChipLine className={"fourth"}/>
-          <ChipMain className={"sixth"}/>
+          <ChipLine className={"first"} />
+          <ChipLine className={"second"} />
+          <ChipLine className={"third"} />
+          <ChipLine className={"fourth"} />
+          <ChipMain className={"sixth"} />
         </Chip>
         <img src={`upload/paymentIcon.svg`} />
       </ChipContainer>

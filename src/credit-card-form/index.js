@@ -45,7 +45,7 @@ class Card extends React.Component {
             <InputBox>
               <label>Card Holder Name</label>
               <input
-                  className={"FullName"}
+                className={"FullName"}
                 type="text"
                 onChange={(e) =>
                   this.setState({
